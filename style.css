@@ -1,68 +1,188 @@
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 /* COLORS */
+:root {
+    /* primary */
+    --Red: rgb(255, 122, 122);
+	--Green: rgb(56, 204, 140);
+
+    /* accent */
+	--Blue: rgb(96, 85, 165);
+	/* Neutral */
+	--Dark-Blue: rgb(62, 60, 73);
+	--Grayish-Blue: rgb(185, 182, 211);
+	--White: rgb(255, 255, 255);
+}
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
-html,
+
+
 body {
-  width: 100vw;
-  height: 100vh;
-  background: url(images/bg-intro-mobile.png) hsl(0, 100%, 74%);
+	background: url(images/bg-intro-mobile.png) var(--Red);
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 main {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+	margin-top: 75px;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	text-align: center;
 }
+
 /* || INTRO CONTAINER  */
+
 .intro {
-  color: hsl(0, 0%, 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	color: var(--White);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
 }
+
 .heading {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
+	font-size: 1.8em;
+	font-weight: 600;
 }
+
 .text {
-  max-width: 350px;
-  font-size: 14px;
+	font-size: 14px;
 }
+
+.rounded {
+	border-radius: 5px;
+}
+
+.shadow {
+	box-shadow: 0px 6px 6px 0px rgba(62, 60, 73, 0.5);
+	-webkit-box-shadow: 0px 6px 6px 0px rgba(62, 60, 73, 0.5);
+	-moz-box-shadow: 0px 6px 6px 0px rgba(62, 60, 73, 0.5);
+}
+
 /* _ */
+
 /* FORM */
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.pricing {
+	background-color: var(--Blue);
+	color: var(--White);
+	text-align: center;
+	width: 100%;
+	padding: 20px 30px;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+form {
+	background-color: var(--White);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	padding: 20px;
+}
+
+input {
+	padding: 10px;
+	border: 1px solid var(--Grayish-Blue);
+}
+
+input::placeholder {
+	font-weight: 600;
+	color: var(--Dark-Blue);
+}
+
+input:focus {
+	outline: 2px solid var(--Green);
+}
+
+.btn {
+	all: unset;
+	border-radius: 5px;
+	background-color: var(--Green);
+	color: var(--White);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 15px;
+	padding: 15px;
+	transition: transform 250ms;
+	box-shadow: 0px 3px 3px 0px rgb(56, 204, 140);
+	-webkit-box-shadow: 0px 3px 3px 0px rgb(56, 204, 140);
+	-moz-box-shadow: 0px 3px 3px 0px rgb(56, 204, 140) ;
+
+}
+
+.btn:active {
+	transform: scale(0.9);
+}
+
+form p {
+	color: var(--Grayish-Blue);
+	font-size: 14px;
+}
+
+form a {
+	font-size: 14px;
+	color: var(--Red);
+	text-decoration: none;
+	font-weight: 700;
+}
+
+/* _ */
+
+
+
+.attribution {
+	position: relative;
+	bottom: -40px;
+	padding-bottom: 20px;
+	width: 90%;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 0.75em;
+	font-weight: 700;
+	color: var(--White);
+
+	p {
+		margin: 10px 0;
+	}
+
+	a {
+		color: var(--Green);
+		padding: 0 -0.25em;
+		margin: 0 -0.25em;
+		text-decoration: none;
+		box-shadow: inset 0 0 0 0;
+		color: var(--Grayish-Blue);
+		transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+		&:hover,
+		&:focus {
+			outline: thin dotted;
+			color: var(--White);
+			box-shadow: inset 200px 0 0 0 var(--Green);
+		}
+	}
+}
