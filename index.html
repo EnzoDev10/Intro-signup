@@ -31,11 +31,43 @@
 					</p>
 				</div>
 				<form class="rounded shadow">
-					<input type="text" placeholder="First Name"    class="rounded" required />
-					<input type="text" placeholder="Last Name"     class="rounded" required />
-					<input type="email" placeholder="Email Address"class="rounded" required />
-					<input type="password" placeholder="Password"  class="rounded" required />
-					<button type="submit" class="btn rounded shadow">Claim your free trial</button>
+					<div class="input-group">
+						<input
+							type="text"
+							placeholder="First Name"
+							class="rounded"
+							required
+						/><span class="error-message">First Name cannot be empty</span
+						><img src="images/icon-error.svg" alt="error-icon" class="error-icon" />
+					</div>
+					<div class="input-group">
+						<input
+							type="text"
+							placeholder="Last Name"
+							class="rounded"
+							required
+						/><span class="error-message">Last name Cannot be empty</span
+							><img src="images/icon-error.svg" alt="error-icon" class="error-icon" />
+						</div>
+					<div class="input-group">
+						<input
+							type="email"
+							placeholder="Email Address"
+							class="rounded"
+							required
+						/><span class="error-message">Looks like this is not an email</span
+							><img src="images/icon-error.svg" alt="error-icon" class="error-icon" />
+						</div>
+					<div class="input-group">
+						<input
+							type="password"
+							placeholder="Password"
+							class="rounded"
+							required
+						/><span class="error-message">Password cannot be empty</span
+							><img src="images/icon-error.svg" alt="error-icon" class="error-icon" />
+						</div>
+					<button type="submit" class="btn">Claim your free trial</button>
 					<p>
 						By clicking the button, you are agreeing to our
 						<a href="" class="terms">Terms and Services</a>

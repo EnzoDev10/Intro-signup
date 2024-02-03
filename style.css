@@ -66,9 +66,10 @@ main {
 }
 
 .shadow {
-	box-shadow: 0px 6px 6px 0px rgba(62, 60, 73, 0.5);
-	-webkit-box-shadow: 0px 6px 6px 0px rgba(62, 60, 73, 0.5);
-	-moz-box-shadow: 0px 6px 6px 0px rgba(62, 60, 73, 0.5);
+	box-shadow: 0px 4px rgba(62, 60, 73, 0.5);
+	-webkit-box-shadow: 0px 5px rgba(62, 60, 73, 0.3);
+	-moz-box-shadow: 0px 4px rgba(62, 60, 73, 0.5);
+
 }
 
 /* _ */
@@ -104,6 +105,20 @@ form {
 	padding: 20px;
 }
 
+.input-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.error-icon {
+	display: none;
+}
+
+.error-message {
+	font-size: 12px;
+	text-align: right;
+}
+
 input {
 	padding: 10px;
 	border: 1px solid var(--Grayish-Blue);
@@ -118,6 +133,10 @@ input:focus {
 	outline: 2px solid var(--Green);
 }
 
+input:not(:focus):invalid {
+	border: 2px solid var(--Red);
+}
+
 .btn {
 	all: unset;
 	border-radius: 5px;
@@ -128,14 +147,18 @@ input:focus {
 	font-size: 15px;
 	padding: 15px;
 	transition: transform 250ms;
-	box-shadow: 0px 3px 3px 0px rgb(56, 204, 140);
-	-webkit-box-shadow: 0px 3px 3px 0px rgb(56, 204, 140);
-	-moz-box-shadow: 0px 3px 3px 0px rgb(56, 204, 140) ;
+	box-shadow: 0px 4px rgb(38, 147, 100);
+	-webkit-box-shadow: 0px 4px rgb(38, 147, 100);
+	-moz-box-shadow: 0px 4px rgb(38, 147, 100);
 
 }
 
 .btn:active {
 	transform: scale(0.9);
+}
+
+.btn:hover {
+	opacity: 0.7;
 }
 
 form p {
@@ -164,25 +187,25 @@ form a {
 	font-size: 0.75em;
 	font-weight: 700;
 	color: var(--White);
+}
 
-	p {
-		margin: 10px 0;
-	}
+.attribution p {
+	margin: 10px 0;
+}
 
-	a {
-		color: var(--Green);
-		padding: 0 -0.25em;
-		margin: 0 -0.25em;
-		text-decoration: none;
-		box-shadow: inset 0 0 0 0;
-		color: var(--Grayish-Blue);
-		transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.attribution a {
+	color: var(--Blue);
+	padding: 0 -0.25em;
+	margin: 0 -0.25em;
+	text-decoration: none;
+	box-shadow: inset 0 0 0 0;
+	transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-		&:hover,
-		&:focus {
-			outline: thin dotted;
-			color: var(--White);
-			box-shadow: inset 200px 0 0 0 var(--Green);
-		}
-	}
+.attribution a:hover,
+.attribution a:focus {
+	outline: thin dotted;
+	color: var(--White);
+	box-shadow: inset 200px 0 0 0 var(--Blue);
+
 }
