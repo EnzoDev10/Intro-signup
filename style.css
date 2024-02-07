@@ -164,7 +164,7 @@ input.active ~ .error-icon {
 	background-color: var(--Green);
 	color: var(--White);
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 15px;
 	padding: 15px;
 	transition: transform 250ms;
@@ -212,7 +212,7 @@ form a {
 }
 
 .attribution a {
-	color: var(--Dark-Blue);
+	color: #222;
 	padding: 0 -0.25em;
 	margin: 0 -0.25em;
 	text-decoration: none;
