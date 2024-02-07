@@ -21,6 +21,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
+	transition: all 0.3s;
 }
 
 body {
@@ -50,16 +51,17 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 20px;
 }
 
 .heading {
-	margin-bottom: 20px;
 	font-size: 1.8em;
 	font-weight: 600;
 }
 
 .text {
 	font-size: 14px;
+	max-width: 500px;
 }
 
 .rounded {
@@ -236,11 +238,11 @@ form a {
 	}
 
 	.intro {
-		max-width: 450px;
 		text-align: left;
 	}
 
 	.heading {
+		max-width: 450px;
 		font-size: 2.8rem;
 	}
 }
