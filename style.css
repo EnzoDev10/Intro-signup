@@ -108,21 +108,14 @@ form {
 .input-group {
 	display: flex;
 	flex-direction: column;
-}
-
-.error-icon {
-	display: none;
-}
-
-.error-message {
-	font-size: 12px;
-	text-align: right;
+	position: relative;
 }
 
 input {
 	padding: 10px;
 	border: 1px solid var(--Grayish-Blue);
 }
+
 
 input::placeholder {
 	font-weight: 600;
@@ -133,8 +126,35 @@ input:focus {
 	outline: 2px solid var(--Green);
 }
 
-input:not(:focus):invalid {
-	border: 2px solid var(--Red);
+input.active {
+	color: var(--Red);
+	font-weight: bold;
+	outline: 2px solid var(--Red);
+}
+
+input.active::placeholder {
+	color: var(--Red);
+}
+
+input.active ~ .error-icon {
+	visibility: visible;
+}
+
+.error{
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	padding-top:5px;
+	color: var(--Red);
+}
+
+.error-icon {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	width: 20px;
+	height: 20px;
+	visibility: hidden;
 }
 
 .btn {
