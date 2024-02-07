@@ -2,11 +2,11 @@
 
 /* COLORS */
 :root {
-    /* primary */
-    --Red: rgb(255, 122, 122);
+	/* primary */
+	--Red: rgb(255, 122, 122);
 	--Green: rgb(56, 204, 140);
 
-    /* accent */
+	/* accent */
 	--Blue: rgb(96, 85, 165);
 	/* Neutral */
 	--Dark-Blue: rgb(62, 60, 73);
@@ -20,13 +20,12 @@
 	font-family: "Poppins", sans-serif;
 }
 
-
 body {
 	background: url(images/bg-intro-mobile.png) var(--Red);
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 main {
@@ -48,7 +47,6 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
 }
 
 .heading {
@@ -69,7 +67,6 @@ main {
 	box-shadow: 0px 4px rgba(62, 60, 73, 0.5);
 	-webkit-box-shadow: 0px 5px rgba(62, 60, 73, 0.3);
 	-moz-box-shadow: 0px 4px rgba(62, 60, 73, 0.5);
-
 }
 
 /* _ */
@@ -116,7 +113,6 @@ input {
 	border: 1px solid var(--Grayish-Blue);
 }
 
-
 input::placeholder {
 	font-weight: 600;
 	color: var(--Dark-Blue);
@@ -140,11 +136,11 @@ input.active ~ .error-icon {
 	visibility: visible;
 }
 
-.error{
+.error {
 	font-size: 12px;
 	font-weight: bold;
 	text-align: right;
-	padding-top:5px;
+	padding-top: 5px;
 	color: var(--Red);
 }
 
@@ -170,7 +166,6 @@ input.active ~ .error-icon {
 	box-shadow: 0px 4px rgb(38, 147, 100);
 	-webkit-box-shadow: 0px 4px rgb(38, 147, 100);
 	-moz-box-shadow: 0px 4px rgb(38, 147, 100);
-
 }
 
 .btn:active {
@@ -194,8 +189,6 @@ form a {
 }
 
 /* _ */
-
-
 
 .attribution {
 	position: relative;
@@ -227,5 +220,23 @@ form a {
 	outline: thin dotted;
 	color: var(--White);
 	box-shadow: inset 200px 0 0 0 var(--Blue);
+}
 
+@media screen and (min-width: 1440px) {
+	body {
+		height: 100vh;
+	}
+
+	main {
+		flex-direction: row;
+		gap: 100px;
+	}
+
+	.intro {
+		max-width: 400px;
+	}
+
+	.heading {
+		font-size: 2.8rem;
+	}
 }
