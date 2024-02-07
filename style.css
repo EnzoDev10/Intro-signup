@@ -3,14 +3,17 @@
 /* COLORS */
 :root {
 	/* primary */
-	--Red: rgb(255, 122, 122);
-	--Green: rgb(56, 204, 140);
+	/* --Red: rgb(255, 122, 122); old */
+	--Red: rgb(225, 92, 92);
+	/* --Green: rgb(56, 204, 140); old */
+	--Green: rgb(26, 174, 110);
+
 
 	/* accent */
 	--Blue: rgb(96, 85, 165);
 	/* Neutral */
 	--Dark-Blue: rgb(62, 60, 73);
-	--Grayish-Blue: rgb(185, 182, 211);
+	--Grayish-Blue: rgb(95, 92, 121);
 	--White: rgb(255, 255, 255);
 }
 * {
@@ -207,7 +210,7 @@ form a {
 }
 
 .attribution a {
-	color: var(--Blue);
+	color: var(--Dark-Blue);
 	padding: 0 -0.25em;
 	margin: 0 -0.25em;
 	text-decoration: none;
@@ -219,7 +222,7 @@ form a {
 .attribution a:focus {
 	outline: thin dotted;
 	color: var(--White);
-	box-shadow: inset 200px 0 0 0 var(--Blue);
+	box-shadow: inset 200px 0 0 0 var(--Dark-Blue);
 }
 
 @media screen and (min-width: 1440px) {
